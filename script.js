@@ -1,3 +1,15 @@
+const cursor = document.querySelector(".cursor");
+
+document.querySelector("main").addEventListener("mousemove", (dets)=>{
+    gsap.to(cursor, {
+        left: dets.clientX,
+        top: dets.clientY
+
+    })
+})
+
+
+
 var tl = gsap.timeline({
     scrollTrigger: {
         trigger: "#page1 #hero-text",
@@ -69,8 +81,6 @@ gsap.from(".elem h5", {
         // markers: true,
         start: "top 30%",
         end: "bottom 90%",
-
-
     }
 })
 

@@ -28,8 +28,16 @@ body{
     background-color: #000729;
     color: aliceblue;
     overflow-x: hidden;
+    cursor: none !important;
 }
-
+.cursor{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: white;
+    mix-blend-mode: difference;
+    position: fixed;
+}
 #page1{
     min-height: 130vh;
     width: 100vw;
@@ -107,7 +115,7 @@ nav #right i{
 }
 
 #page1 video{
-    width: 50%;
+    width: 30%;
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -288,4 +296,127 @@ nav #right i{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    #page1 nav {
+        height: 15vw;
+        padding: 4vw;
+    }
+
+    #page1 nav a img {
+        width: 25vw;
+    }
+
+    nav #nav-button {
+        display: none; /* Hide navigation buttons on mobile */
+    }
+
+    nav #right {
+        padding-right: 3vw;
+    }
+
+    nav #right i {
+        font-size: 2rem;
+    }
+
+    #hero-text {
+        margin-top: 15vw;
+    }
+
+    #hero-text h1 {
+        font-size: 20vw;
+        line-height: 18vw;
+    }
+
+    #hero-text #hero-middle {
+        margin-left: 0;
+        flex-direction: column;
+        padding: 4vw;
+    }
+
+    #hero-text #hero-middle p {
+        width: 90vw;
+        text-align: left;
+        margin-bottom: 4vw;
+    }
+
+    #hero-text h1:nth-child(3) {
+        margin-right: 0;
+    }
+
+    #page1 video {
+        width: 90%;
+    }
+
+    /* Page 2 Adjustments */
+    #page2 #page2Text h3 {
+        font-size: 10vw;
+        line-height: 11vw;
+        padding: 2vw;
+    }
+
+    #page2 .imageCont {
+        width: 95vw;
+        margin: 4vw auto;
+    }
+
+    .elem {
+        padding: 8vw 4vw;
+    }
+
+    .elem h1 {
+        font-size: 6vw;
+    }
+
+    /* About Section Adjustments */
+    #aboutme {
+        flex-direction: column;
+        padding-left: 5vw;
+        padding-top: 15vw;
+        gap: 40px;
+    }
+
+    #aboutme .textabout {
+        width: 90vw;
+    }
+
+    #aboutme .textabout h5 {
+        font-size: 3vw;
+    }
+
+    #aboutme .textabout p {
+        font-size: 4vw;
+    }
+
+    #aboutme img {
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    /* Footer Adjustments */
+    #footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    #footer .leftf h5 {
+        font-size: 3vw;
+    }
+
+    #footer .rightf {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .aboutfoot h5 {
+        font-size: 3vw;
+    }
+
+    .aboutfoot a {
+        font-size: 4vw;
+    }
 }
