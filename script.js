@@ -144,3 +144,19 @@ tl2.from("#footer",{
     duration: .5,
     stagger: .15
 })
+
+var tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#page3",
+        scroller: "body",
+        // markers: true,
+        start: "top 50%",
+        end: "top 0%",
+        scrub: 3
+    }
+});
+
+tl3.to("body", {
+    backgroundColor: "#000729",
+    color: "#f0f8ff",
+})
